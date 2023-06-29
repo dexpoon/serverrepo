@@ -1,0 +1,18 @@
+{
+  "compileOnSave": false,
+  "include": ["app.ts"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "outDir": "./",           //   was here.. dist/out-tsc", 
+    "sourceMap": false,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": false,
+    "target": "es6",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": ["es6"]     
+  }
+}
