@@ -47,7 +47,7 @@ router.get('/create/:description-:status-:priority-:ddate-:category-:username-:n
 });
 
 // ============================== UPDATE ===============================================================//
-router.get('/update/:id-:description-:notes-:status-:priority-:ddate-:category-:username', (req, res, next) => {
+router.get('/update/:id-:description-:notes-:status-:priority-:ddate-:category-:docuName-:username', (req, res, next) => {
     let editTask = new Task({
         description: req.params.description,
         notes: req.params.notes,
@@ -56,6 +56,7 @@ router.get('/update/:id-:description-:notes-:status-:priority-:ddate-:category-:
         id: req.params.id,
         ddate: req.params.ddate,
         category: req.params.category,
+        docuName: req.params.docuName,
         username: req.params.username
     });
 
