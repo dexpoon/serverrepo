@@ -110,6 +110,7 @@ module.exports.update = (task, callback) => {
                         doc.status = task.status;
                         doc.priority = task.priority;
                         doc.category = task.category;
+                        doc.docuName = task.docuName;
                         doc.ddate = task.ddate;
                         doc.notes = null;
                         doc.notes = task.notes;
@@ -124,6 +125,7 @@ module.exports.update = (task, callback) => {
             doc.status = task.status;
             doc.priority = task.priority;
             doc.category = task.category;
+            doc.docuName = task.docuName;
             doc.ddate = task.ddate;
             doc.notes = null;
             doc.notes = task.notes;
