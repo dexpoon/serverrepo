@@ -15,32 +15,16 @@ let os          = require('os')
 
 // db defaults to local DB
 let db = config.localDB
-let IPv4_IPs: any[] = []
 
-if(deploy.LOCAL == true) {
+if(deploy.LOCAL == true) 
     db = config.localDB;
-}else 
-if(deploy.DOCKER == true) {
-    /*  Leaving this here in case I need it for something else
-        This does not work, because running outside Docker, I get different IPs than inside Docker
-        Docker only shows 2 Network Interfaces eth0 IP and lo for loopback 127.0.01
-        and both IPs do not work
-        Running this code here generates Ips that do work, but only when running from outside Docker..
-        var interfaces = os.networkInterfaces();
-        for (var key in interfaces) {
-        var interfaceInfo=interfaces[key];
-        console.log("key:", key)
-        interfaceInfo.forEach(element => {    
-            if(element.family == 'IPv4') 
-            IPv4_IPs.push(element.address)
-    });  
-    }*/
+else 
+if(deploy.DOCKER == true) 
     db = config.dockerDB;
- 
-}else
-if(deploy.AWS ==true) {
+else
+if(deploy.AWS ==true) 
     db = config.awsDB;
-}
+
 
 
 mongoose.connect(db, { useMongoClient: true });
