@@ -1,10 +1,11 @@
-==== Server_07-05-23 ================ SERVER_070523 76daa548ca29
-VERSION JULY_05_2023
+==== Server_07-07-23  
+VERSION JULY_07_2023
 Attach Documents by name
 Detach document
-Store text and document
+Store Text and Document
+Uses POST and PUT
 Complete Check Box Fix
 Git Pull Request Process
 Deployed to Docker
-Checked in to Github
-https://github/com/dexpoon/serverrepo
+Check in to Github
+https://github.com/dexpoon/serverrepo
